@@ -25,6 +25,7 @@ export const Container = styled.footer`
     line-height: 13px;
     font-size: 0.625rem;
     margin-top: 5px;
+    margin-left: 30px;
   }
   @media (min-width: 45rem) {
     h1 {
@@ -36,7 +37,7 @@ export const Container = styled.footer`
 
 export const Info = styled.ul`
   text-align: center;
-  i li {
+  li {
     margin-top: 3px;
     &.active {
       display: none;
@@ -94,6 +95,9 @@ export const Social = styled.div`
   gap: 10px;
   align-items: center;
   justify-content: center;
+  a {
+    color: ${({ theme }) => theme.COLORS.FONT_COLOR};
+  }
   @media (min-width: 45rem) {
     font-size: 2rem;
   }

@@ -1,4 +1,31 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+const slideRight = keyframes`
+  0% {
+    left: 100%;    
+
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 0;
+
+  }
+`;
+
+const slideLeft = keyframes`
+  0% {
+    right: 100%;    
+
+  }
+  50% {
+    right: 50%;
+  }
+  100% {
+    right: 0;
+
+  }
+`;
 
 export const template = styled.div`
   @media (min-width: 45rem) {
@@ -20,6 +47,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 
   main {
     width: 100vw;
@@ -54,7 +82,7 @@ export const FotoDisplay = styled.div`
     width: 200px;
     height: 480px;
     border-radius: 20px;
-    background-color: #ff807c;
+    background-color: ${({ theme }) => theme.COLORS.DECORATION};
     position: absolute;
     top: -25px;
     left: 250px;
@@ -69,6 +97,7 @@ export const Orcamento = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   p {
     width: 210px;
@@ -80,6 +109,8 @@ export const Orcamento = styled.section`
     margin-top: 20px;
   }
   @media (min-width: 45rem) {
+    animation: ${slideRight} 1s linear forwards;
+
     flex-direction: row;
     align-items: center;
     width: 70vw;
@@ -93,6 +124,7 @@ export const Produtos = styled.section`
   display: flex;
   flex-direction: column;
   margin: 10px auto;
+  position: relative;
 
   p {
     text-align: center;
@@ -104,6 +136,8 @@ export const Produtos = styled.section`
   }
 
   @media (min-width: 45rem) {
+    animation: ${slideLeft} 1s linear forwards;
+
     margin-top: 50px;
     img {
       width: min(900px, 75vw);

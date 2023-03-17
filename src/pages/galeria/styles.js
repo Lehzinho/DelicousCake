@@ -1,5 +1,33 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 const svgColor = ({ theme }) => theme.COLORS.DECORATION;
+
+const slideRight = keyframes`
+  0% {
+    left: 100%;    
+
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 0;
+
+  }
+`;
+
+const slideLeft = keyframes`
+  0% {
+    right: 100%;    
+
+  }
+  50% {
+    right: 50%;
+  }
+  100% {
+    right: 0;
+
+  }
+`;
 
 export const template = styled.div`
   @media (min-width: 45rem) {
@@ -15,6 +43,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 
   main {
     h1 {
@@ -48,6 +77,8 @@ export const GaleriaSlide = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  animation: ${slideRight} 1s linear forwards;
 
   button {
     margin-top: 20px;
@@ -60,6 +91,7 @@ export const Avaliações = styled.section`
   display: flex;
   flex-direction: column;
   margin: 40px auto 16px;
+  position: relative;
 
   > div {
     display: flex;
@@ -72,6 +104,7 @@ export const Avaliações = styled.section`
   }
 
   @media (min-width: 45rem) {
+    animation: ${slideLeft} 1s linear forwards;
   }
 `;
 
@@ -90,7 +123,7 @@ export const Fotos = styled.div`
       content: "";
       width: 200px;
       height: 720px;
-      background-color: red;
+      background-color: ${({ theme }) => theme.COLORS.DECORATION};
       border-radius: 15px;
       position: absolute;
       left: -40px;
@@ -109,16 +142,23 @@ export const Feed = styled.div`
   justify-items: center;
   gap: 20px;
   overflow: auto;
-
-  img {
-    border-radius: 20px;
+  div {
+    img {
+      width: 200px;
+      height: 250px;
+      border-radius: 20px;
+    }
   }
   @media (min-width: 43rem) {
-    width: 400px;
-    height: 400px;
-    img {
-      width: 400px;
-      aspect-ratio: 1;
+    width: 410px;
+    height: 420px;
+    div {
+      img {
+        width: 400px;
+        height: 400px;
+
+        aspect-ratio: 1;
+      }
     }
   }
   @media (min-width: 48rem) {
@@ -126,15 +166,21 @@ export const Feed = styled.div`
     height: fit-content;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    img {
-      width: 190px;
-      aspect-ratio: 1;
+
+    div {
+      img {
+        width: 190px;
+        height: 190px;
+        aspect-ratio: 1;
+      }
     }
-    img:nth-child(4) {
+    div:nth-child(4) {
       grid-column: 1/ 3;
       grid-row: span 2;
-      width: 100%;
-      aspect-ratio: 1;
+      img {
+        width: 400px;
+        height: 410px;
+      }
     }
   }
 `;

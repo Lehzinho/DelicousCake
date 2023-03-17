@@ -17,20 +17,33 @@ export function Footer() {
     <Container>
       <h1>CONTATO</h1>
       <Info>
-        <info>
+        <span>
           <li>Leidiane Borges</li>
           <li className="active">Kilbeggan</li>
           <li className="active">Irlanda</li>
-        </info>
-        <info>
+        </span>
+        <span>
           <li>+353 87 794-5126</li>
-          <li>lidiane@gmail.com</li>
+          <li>lleididilica@hotmail.com</li>
           <Social>
-            <AiOutlineFacebook />
-            <AiOutlineInstagram />
-            <AiOutlineWhatsApp />
+            <a
+              href="https://www.facebook.com/leidiane.borges.3?mibextid=ZbWKwL"
+              target="_blank"
+            >
+              <AiOutlineFacebook />
+            </a>
+            <a
+              href="https://instagram.com/delicioous_cakes?igshid=YmMyMTA2M2Y="
+              target="_blank"
+            >
+              <AiOutlineInstagram />
+            </a>
+
+            <a href="https://wa.me/+353877945126" target="_blank">
+              <AiOutlineWhatsApp />
+            </a>
           </Social>
-        </info>
+        </span>
         <Links>
           <NavLink
             to="/"

@@ -10,8 +10,14 @@ import {
 } from "./styles";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import Foto from "../../assets/Marvel.jpg";
+import Foto1 from "../../assets/Haineken.jpg";
+import Foto2 from "../../assets/Hallowin.jpg";
+import Foto3 from "../../assets/Buterfly.jpg";
+import Foto4 from "../../assets/Minie.jpg";
+import Foto5 from "../../assets/Netflix.jpg";
 import { Comment } from "../../Components/Comment";
 import { Nav } from "../../Components/Nav";
+import { ImgModal } from "../../Components/ImgModal";
 
 export function Galeria({ media }) {
   return (
@@ -21,16 +27,14 @@ export function Galeria({ media }) {
         <GaleriaSlide>
           <h1>Galeria de Fotos</h1>
           <Fotos>
-            <BsArrowLeftCircle />
             <Feed>
-              <img src={Foto} alt="" />
-              <img src={Foto} alt="" />
-              <img src={Foto} alt="" />
-              <img src={Foto} alt="" />
-              <img src={Foto} alt="" />
-              <img src={Foto} alt="" />
+              <ImgModal image={Foto} />
+              <ImgModal image={Foto1} />
+              <ImgModal image={Foto2} />
+              <ImgModal image={Foto3} />
+              <ImgModal image={Foto4} />
+              <ImgModal image={Foto5} />
             </Feed>
-            <BsArrowRightCircle />
           </Fotos>
         </GaleriaSlide>
         <Avaliações>

@@ -7,7 +7,7 @@ export const DropdownButton = styled.div`
   justify-content: space-between;
   align-items: center;
   background: #fff;
-  border: 1px solid #ff807c;
+  border: 1px solid ${({ theme }) => theme.COLORS.DECORATION};
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -26,7 +26,7 @@ export const DropdownList = styled.ul`
   position: absolute;
   top: 25px; /* updated */
   left: 0; /* added */
-  border: 1px solid #ff807c;
+  border: 1px solid ${({ theme }) => theme.COLORS.DECORATION};
   border-radius: 4px;
   list-style-type: none;
   padding: 0;

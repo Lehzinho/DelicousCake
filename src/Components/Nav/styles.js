@@ -10,6 +10,10 @@ export const SocialMedia = styled.div`
   font-size: 2rem;
   margin-top: min(5vw, 70px);
   margin-right: 130px;
+  gap: 10px;
+  a {
+    color: ${({ theme }) => theme.COLORS.FONT_COLOR};
+  }
 
   @media (min-width: 45rem) {
   }
@@ -49,7 +53,7 @@ export const NavButton = styled.nav`
       }
     }
     li {
-      color: #371701;
+      color: ${({ theme }) => theme.COLORS.FONT_COLOR};
       font-family: "Noto Sans", sans-serif;
       font-size: clamp(0.5rem, 1.5vw, 1.25rem);
     }

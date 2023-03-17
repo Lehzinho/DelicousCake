@@ -58,9 +58,22 @@ export function Nav() {
         </ul>
       </NavButton>
       <SocialMedia>
-        <AiOutlineFacebook />
-        <AiOutlineInstagram />
-        <AiOutlineWhatsApp />
+        <a
+          href="https://www.facebook.com/leidiane.borges.3?mibextid=ZbWKwL"
+          target="_blank"
+        >
+          <AiOutlineFacebook />
+        </a>
+        <a
+          href="https://instagram.com/delicioous_cakes?igshid=YmMyMTA2M2Y="
+          target="_blank"
+        >
+          <AiOutlineInstagram />
+        </a>
+
+        <a href="https://wa.me/+353877945126" target="_blank">
+          <AiOutlineWhatsApp />
+        </a>
       </SocialMedia>
     </Container>
   );

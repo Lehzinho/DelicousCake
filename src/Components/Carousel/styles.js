@@ -4,13 +4,13 @@ export const Container = styled.div`
   display: flex;
   margin: 0 auto;
   position: relative;
-  width: 50%;
-  height: 200px;
+  width: 360px;
+  height: 300px;
   overflow: hidden;
   border-radius: 15px;
   @media (min-width: 45rem) {
     width: 800px;
-    height: 500px;
+    height: 700px;
   }
 `;
 
@@ -20,7 +20,7 @@ export const SlideWrapper = styled.div`
   position: relative;
 
   width: ${(props) => props.count * 50}%;
-  left: ${(props) => -props.activeIndex * 102}%;
+  left: ${(props) => -props.activeIndex * 100}%;
 
   transition: left 2s ease-in-out;
   @media (min-width: 45rem) {
@@ -33,14 +33,14 @@ export const Slide = styled.div`
   flex-shrink: 0;
   width: fit-content;
   img {
-    width: 220px;
-    height: 200px;
+    width: 360px;
+    height: 300px;
   }
 
   @media (min-width: 45rem) {
     img {
       width: 800px;
-      height: 500px;
+      height: 700px;
     }
   }
 `;

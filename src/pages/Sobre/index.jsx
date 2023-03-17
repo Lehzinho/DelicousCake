@@ -2,7 +2,6 @@ import { Footer } from "../../Components/Footer";
 import { MobileNav } from "../../Components/MobileNav";
 import { Container, SobreMim, ComoTudoComeçou } from "./styles";
 import FotoPerfil from "../../assets/PerfilPose.jpg";
-import FotoPerfil2 from "../../assets/PerfilPick.jpg";
 import { Nav } from "../../Components/Nav";
 
 export function Sobre({ media }) {
@@ -13,7 +12,7 @@ export function Sobre({ media }) {
         <h1>Como Tudo Começou</h1>
         {!media && (
           <ComoTudoComeçou>
-            <img src={FotoPerfil2} alt="" />
+            {/* <img src={FotoPerfil2} alt="" /> */}
           </ComoTudoComeçou>
         )}
         <SobreMim>

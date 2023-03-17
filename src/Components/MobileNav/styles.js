@@ -63,7 +63,7 @@ export const Menu = styled.ul`
   gap: 5px;
   padding: 10px 20px;
   border-radius: 5px;
-  border: 1px solid #f6aaad;
+  border: 1px solid ${({ theme }) => theme.COLORS.BUTTON_COLOR};
   background: #f7e9e9;
   a {
     font-family: "Inter";
@@ -76,6 +76,6 @@ export const Menu = styled.ul`
     color: black;
   }
   a.active {
-    color: #f6aaad;
+    color: ${({ theme }) => theme.COLORS.BUTTON_COLOR};
   }
 `;

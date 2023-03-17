@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { Container, Dot, DotContainer, Slide, SlideWrapper } from "./styles";
 
 export function Carousel({ slides, autoPlay = false, interval = 5000 }) {
-  console.log(slides);
   const count = slides.length;
   const [activeIndex, setActiveIndex] = useState(0);
   const [shouldPause, setShouldPause] = useState(false);
@@ -16,7 +15,6 @@ export function Carousel({ slides, autoPlay = false, interval = 5000 }) {
     }
     return () => {
       clearTimeout(timeoutRef.current);
-      console.log("Timeout cleared");
     };
   }, [activeIndex, count, autoPlay, interval, shouldPause]);
 

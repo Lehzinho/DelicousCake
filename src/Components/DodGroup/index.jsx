@@ -5,7 +5,9 @@ export function DotGroup() {
     <Container>
       <Dots></Dots>
       <Dots></Dots>
-      <Dots style={{ backgroundColor: "#FF807C" }}></Dots>
+      <Dots
+        style={{ backgroundColor: ({ theme }) => theme.COLORS.DECORATION }}
+      ></Dots>
       <Dots></Dots>
       <Dots></Dots>
       <Dots></Dots>

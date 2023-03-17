@@ -41,7 +41,7 @@ export const Form = styled.form`
     line-height: 14px;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #ff807c;
+    border: 1px solid ${({ theme }) => theme.COLORS.DECORATION};
   }
   button {
     margin-top: 20px;

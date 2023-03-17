@@ -8,6 +8,7 @@ import slide from "../../assets/Hallowin.jpg";
 import slide1 from "../../assets/Marvel.jpg";
 import slide2 from "../../assets/Netflix.jpg";
 import { Nav } from "../../Components/Nav";
+import { useRef } from "react";
 
 export function Home({ media }) {
   const slides = [
