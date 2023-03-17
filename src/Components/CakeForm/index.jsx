@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../Button";
 import DropdownMenu from "../DropdownMenu";
 import { Container, Form, Fieldset } from "./styles";
@@ -12,8 +13,11 @@ export function CakeForm({ hasBudget = false, contato }) {
     "Oreo",
     "4 leites com geleia de frutas vermelhas",
   ];
-
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [massa, setMassa] = useState("");
+  const [mensagem, setMensagem] = useState("");
   const [andares, setAndares] = useState("");
   const [cobertura, setCobertura] = useState("");
   const [recheio1, setRecheio1] = useState("");
@@ -33,27 +37,43 @@ export function CakeForm({ hasBudget = false, contato }) {
   };
 
   const handleRecheio1Change = (event) => {
-    setRecheio1(event);
+    setRecheio1(event + " ");
   };
 
   const handleRecheio2Change = (event) => {
-    setRecheio2(event);
+    setRecheio2(" e " + event);
+    console.log(recheio2);
   };
 
   const handleTamanhoChange = (event) => {
     setTamanho(event.target.value);
   };
 
+  const routeChange = `https://wa.me/+353877945126?text=Ol%C3%A1%2C%20meu%20nome%20%C3%A9%20${name}%0AMeu%20email%20${email}%0ATelefone%20%2B${phone}%0AGostaria%20de%20um%20or%C3%A7amento%20da%20seguinte%20ordem%3A%20%0ABolo%20de%20massa%20${massa}%0A${andares}%0Acobertura%20em%20${cobertura}%0Arecheio%20de%20${recheio1}${
+    recheio2 && recheio2
+  }%20%0Atamanho%20de%20${tamanho}%20%0A${mensagem}`;
+
   return (
     <Container className={contato ? "active" : ""}>
       <Form className={contato ? "active" : ""}>
         <label htmlFor="name">Name:</label>
-        <input type="text" name="name" />
+        <input
+          type="text"
+          name="name"
+          onChange={(e) => setName(e.target.value)}
+        />
         <label htmlFor="email">Email:</label>
-        <input type="email" name="email" />
+        <input
+          type="email"
+          name="email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <label htmlFor="phone">Phone:</label>
-        <input type="phone" name="phone" />
-        <label htmlFor="information">Additional Information:</label>
+        <input
+          type="phone"
+          name="phone"
+          onChange={(e) => setPhone(e.target.value)}
+        />
         {hasBudget && (
           <div>
             <Fieldset>
@@ -232,8 +252,18 @@ export function CakeForm({ hasBudget = false, contato }) {
             </Fieldset>
           </div>
         )}
-        <textarea name="information" />
-        <Button className={contato ? "active" : ""} title="SEND" />
+        <label htmlFor="information">Additional Information:</label>
+        <textarea
+          name="information"
+          onChange={(e) => setMensagem(e.target.value)}
+          placeholder="Informe quantas pessoas e Informações Adicionais"
+          style={{ padding: "5px" }}
+        />
+        <Button
+          handleClick={routeChange}
+          className={contato ? "active" : ""}
+          title="SEND"
+        />
       </Form>
     </Container>
   );

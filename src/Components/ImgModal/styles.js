@@ -24,6 +24,8 @@ export const Modal = styled.div`
   top: 0;
   right: 0;
   position: fixed;
+  z-index: 10;
+
   #ImgModal {
     width: min(70vw, 700px);
     height: min(75vw, 800px);

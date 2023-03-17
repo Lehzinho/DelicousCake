@@ -40,7 +40,6 @@ export function Galeria({ media }) {
         <Avaliações>
           <h1>Avaliações</h1>
           <div>
-            <BsArrowLeftCircle />
             <Comments>
               <Comment />
               <Comment />
@@ -49,7 +48,6 @@ export function Galeria({ media }) {
               <Comment />
               <Comment />
             </Comments>
-            <BsArrowRightCircle />
           </div>
         </Avaliações>
       </main>

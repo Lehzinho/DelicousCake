@@ -1,10 +1,17 @@
 import { NavLink } from "react-router-dom";
 import { Container } from "./styles";
 
-export function Button({ link, title, ...rest }) {
+export function Button({ handleClick, link, title, ...rest }) {
   return (
     <NavLink to={link}>
-      <Container {...rest}>{title}</Container>
+      <Container
+        onClick={() => {
+          window.open(handleClick, "_blank");
+        }}
+        {...rest}
+      >
+        {title}
+      </Container>
     </NavLink>
   );
 }

@@ -1,14 +1,14 @@
-import { Button } from "../../Components/Button";
+import { Container, Orcamento, Produtos, Slides, FotoDisplay } from "./styles";
+import { Nav } from "../../Components/Nav";
 import { Footer } from "../../Components/Footer";
 import { MobileNav } from "../../Components/MobileNav";
-import { Container, Orcamento, Produtos, Slides, FotoDisplay } from "./styles";
-import Display from "../../assets/Wedding.jpg";
 import { Carousel } from "../../Components/Carousel";
+import { Button } from "../../Components/Button";
+
+import Display from "../../assets/Wedding.jpg";
 import slide from "../../assets/Hallowin.jpg";
 import slide1 from "../../assets/Marvel.jpg";
 import slide2 from "../../assets/Netflix.jpg";
-import { Nav } from "../../Components/Nav";
-import { useRef } from "react";
 
 export function Home({ media }) {
   const slides = [

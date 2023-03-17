@@ -20,18 +20,19 @@ export function Orçamento({ media }) {
             <CakeInfo>
               <img src={cakeInfo} alt="" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                corrupti quia laborum doloribus maxime excepturi quibusdam quae
-                adipisci, reiciendis doloremque! Corrupti dolores accusamus
-                laborum itaque rem officiis, reiciendis exercitationem beatae.
-                Est, ipsa consequatur aliquam iusto aperiam repudiandae dicta
-                quod cupiditate iste alias obcaecati deleniti numquam maiores
-                magnam ullam sequi animi. Accusamus voluptatum porro atque!
-                Veritatis cupiditate non ullam sapiente voluptas! Optio, maxime
-                reprehenderit at ipsum tempora eius modi dolor soluta et
-                mollitia laborum velit qui, neque, nobis dicta temporibus
-                eligendi id eaque natus hic sequi assumenda eos aspernatur
-                libero? Ipsum. Nesciunt sunt atque quasi, laudantium
+                Bem-vindo(a) a página de orçamentos da Delicious Cakes, eu sou
+                Leidiane Borges e terei o prazer de fazer parte de um momento
+                especial para você e sua família.
+                <br />
+                <br />
+                Preencha os dados conforme solicitado e se tiver alguma
+                observação a mais que gostaria de informar, adicione à caixa de
+                informações adicionais, assim que enviar estarei entrando em
+                contato em no máximo 48 horas.
+                <br />
+                <br />
+                Você será redirecionado(a) para o meu WhatsApp, caso esteja em
+                um computador você deverá utilizar o WhatsApp Web.
               </p>
             </CakeInfo>
           )}
