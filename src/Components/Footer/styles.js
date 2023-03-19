@@ -18,7 +18,9 @@ export const Container = styled.footer`
   font-family: "Merriweather";
   font-size: 0.5rem;
   padding: 5px;
-
+  a {
+    color: ${({ theme }) => theme.COLORS.FOOTER_FONT_COLOR};
+  }
   > h1 {
     font-style: normal;
     font-weight: 700;

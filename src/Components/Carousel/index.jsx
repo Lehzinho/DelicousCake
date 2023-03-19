@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Comment } from "../Comment";
 import { Container, Dot, DotContainer, Slide, SlideWrapper } from "./styles";
 
 export function Carousel({ slides, autoPlay = false, interval = 5000 }) {
@@ -54,7 +55,11 @@ export function Carousel({ slides, autoPlay = false, interval = 5000 }) {
             key={index}
             style={{ zIndex: index, position: "relative", height: "100%" }}
           >
-            <img src={slide.src} alt={slide.alt} />
+            {slide.id ? (
+              <img src={slide.src} alt={slide.alt} />
+            ) : (
+              <Comment nome={slide.nome} comentario={slide.comentario} />
+            )}
           </Slide>
         ))}
       </SlideWrapper>

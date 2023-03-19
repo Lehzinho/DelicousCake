@@ -18,8 +18,67 @@ import Foto5 from "../../assets/Netflix.jpg";
 import { Comment } from "../../Components/Comment";
 import { Nav } from "../../Components/Nav";
 import { ImgModal } from "../../Components/ImgModal";
+import { useRef, useState } from "react";
+
+const comments = [
+  {
+    nome: "Dayanna",
+    comentario:
+      "Não tenho palavras para agradecer pelo carinho que você transmite atravez desse trabalho lindo. Mexe com a emoção daquele momento. Você nao tem ideia de quantas pessoas amaram o seu trabalho e eu nem preciso dizer foi um evento no igreja e foi incrivel, você fez parte daquele momento. Obrigada mais uma vez por tornar cada momento ainda mais especial.",
+  },
+  {
+    nome: "Carolina Kloc",
+    comentario:
+      "Não tenho palavras para agradecer pelo carinho que você transmite atravez desse trabalho lindo. Mexe com a emoção daquele momento. Você nao tem ideia de quantas pessoas amaram o seu trabalho e eu nem preciso dizer foi um evento no igreja e foi incrivel, você fez parte daquele momento. Obrigada mais uma vez por tornar cada momento ainda mais especial.",
+  },
+  {
+    nome: "Dayanna",
+    comentario:
+      "Não tenho palavras para agradecer pelo carinho que você transmite atravez desse trabalho lindo. Mexe com a emoção daquele momento. Você nao tem ideia de quantas pessoas amaram o seu trabalho e eu nem preciso dizer foi um evento no igreja e foi incrivel, você fez parte daquele momento. Obrigada mais uma vez por tornar cada momento ainda mais especial.",
+  },
+];
 
 export function Galeria({ media }) {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollRef = useRef(null);
+
+  const handleScroll = () => {
+    const position = scrollRef.current.scrollLeft;
+    setScrollPosition(position);
+  };
+
+  const handleScrollLeft = () => {
+    smoothScroll(scrollRef.current, scrollPosition, scrollPosition - 860, 300);
+  };
+
+  const handleScrollRight = () => {
+    smoothScroll(scrollRef.current, scrollPosition, scrollPosition + 860, 300);
+  };
+
+  const smoothScroll = (element, from, to, duration) => {
+    let start = null;
+
+    const animate = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+      const increment = (to - from) * (progress / duration);
+      const newPosition = Math.min(
+        Math.max(from + increment, 0),
+        element.scrollWidth - element.clientWidth
+      );
+
+      element.scrollTo({ left: newPosition });
+
+      if (progress < duration) {
+        requestAnimationFrame(animate);
+      } else {
+        setScrollPosition(newPosition);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  };
+
   return (
     <Container>
       {media ? <MobileNav /> : <Nav />}
@@ -40,14 +99,13 @@ export function Galeria({ media }) {
         <Avaliações>
           <h1>Avaliações</h1>
           <div>
-            <Comments>
-              <Comment />
-              <Comment />
-              <Comment />
-              <Comment />
-              <Comment />
-              <Comment />
+            {!media && <BsArrowLeftCircle onClick={handleScrollLeft} />}
+            <Comments ref={scrollRef} onScroll={handleScroll}>
+              {comments.map((e, index) => (
+                <Comment key={index} nome={e.nome} comentario={e.comentario} />
+              ))}
             </Comments>
+            {!media && <BsArrowRightCircle onClick={handleScrollRight} />}
           </div>
         </Avaliações>
       </main>

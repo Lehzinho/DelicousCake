@@ -1,22 +1,19 @@
 import { Container } from "./styles";
 import { FaRegSmileBeam } from "react-icons/fa";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 
-export function Comment() {
+export function Comment({ nome, comentario }) {
   return (
     <Container>
       <FaRegSmileBeam />
-      <h5>JULIANA C MARQUES</h5>
-      <p>
-        “O bolo de Prestígio com castanhas ganhou meu coração. É simplesmente
-        maravilhoso. Recomendo”
-      </p>
+      <h5>{nome}</h5>
+      <p>{comentario}</p>
       <div>
-        <AiOutlineStar />
-        <AiOutlineStar />
-        <AiOutlineStar />
-        <AiOutlineStar />
-        <AiOutlineStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
+        <AiFillStar />
       </div>
     </Container>
   );

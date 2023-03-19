@@ -6,7 +6,7 @@ export function Button({ handleClick, link, title, ...rest }) {
     <NavLink to={link}>
       <Container
         onClick={() => {
-          window.open(handleClick, "_blank");
+          handleClick && window.open(handleClick, "_blank");
         }}
         {...rest}
       >

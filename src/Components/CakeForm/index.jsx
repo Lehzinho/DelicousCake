@@ -56,7 +56,7 @@ export function CakeForm({ hasBudget = false, contato }) {
   return (
     <Container className={contato ? "active" : ""}>
       <Form className={contato ? "active" : ""}>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name">Nome:</label>
         <input
           type="text"
           name="name"
@@ -68,7 +68,7 @@ export function CakeForm({ hasBudget = false, contato }) {
           name="email"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="phone">Phone:</label>
+        <label htmlFor="phone">Telefone:</label>
         <input
           type="phone"
           name="phone"
@@ -252,11 +252,11 @@ export function CakeForm({ hasBudget = false, contato }) {
             </Fieldset>
           </div>
         )}
-        <label htmlFor="information">Additional Information:</label>
+        <label htmlFor="information">Informações Adicionais:</label>
         <textarea
           name="information"
           onChange={(e) => setMensagem(e.target.value)}
-          placeholder="Informe quantas pessoas e Informações Adicionais"
+          placeholder="Observações / Quantidade de pessoas"
           style={{ padding: "5px" }}
         />
         <Button

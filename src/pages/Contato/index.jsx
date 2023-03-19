@@ -28,8 +28,7 @@ export function Contato({ media }) {
               <h3>CONTATO</h3>
               <ul>
                 <li>+353 87 794-5126</li>
-                <li>leidiane@gmail.com</li>
-                <li>Rua Bem Ali, n 133</li>
+                <li>lleidilica@hotmail.com</li>
                 <li>Kilbeggan - Ireland</li>
               </ul>
             </div>

@@ -24,7 +24,7 @@ export function Footer() {
         </span>
         <span>
           <li>+353 87 794-5126</li>
-          <li>lleididilica@hotmail.com</li>
+          <li>lleidilica@hotmail.com</li>
           <Social>
             <a
               href="https://www.facebook.com/leidiane.borges.3?mibextid=ZbWKwL"
@@ -84,7 +84,7 @@ export function Footer() {
       </Info>
       <Copyright>
         <small> Copyright © Todos os direitos reservados</small>
-        <small> Site feito por VivianeCastilho e Alexandre Toulios</small>
+        {/* <small> Site feito por VivianeCastilho e Alexandre Toulios</small> */}
       </Copyright>
     </Container>
   );

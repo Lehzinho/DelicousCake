@@ -29,11 +29,6 @@ const slideLeft = keyframes`
   }
 `;
 
-export const template = styled.div`
-  @media (min-width: 45rem) {
-  }
-`;
-
 export const Container = styled.div`
   display: grid;
   grid-template-areas: "nav" "content" "footer";
@@ -59,7 +54,6 @@ export const Container = styled.div`
     main {
       h1 {
         margin-top: 50px;
-        margin-bottom: 80px;
         white-space: nowrap;
         font-size: 5rem;
       }
@@ -185,26 +179,37 @@ export const Feed = styled.div`
   }
 `;
 export const Comments = styled.div`
-  height: 200px;
   padding: 0 10px;
-  width: 170px;
-  flex-wrap: wrap;
+  width: 80%;
+  height: 400px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: auto;
   gap: 20px;
 
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.DECORATION};
+    border-radius: 3px;
+  }
+
   @media (min-width: 43rem) {
-    width: 560px;
+    height: 600px;
     padding: 0 20px;
     gap: 40px;
-    margin-bottom: 130px;
-    height: 350px;
   }
   @media (min-width: 61rem) {
     width: 860px;
-    height: 350px;
   }
 `;

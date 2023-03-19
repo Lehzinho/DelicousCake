@@ -7,14 +7,13 @@ export const template = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 150px;
-  height: 204px;
+  height: fit-content;
+  padding: 20px 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: transparent;
-
   border: 1px solid ${colorTemplate};
   border-radius: 20px;
   h5 {
@@ -24,7 +23,7 @@ export const Container = styled.div`
   }
   p {
     margin: 10px 0;
-    width: 110px;
+    width: 80%;
     height: fit-content;
     padding: 25px 10px;
     font-size: 0.5rem;
@@ -41,16 +40,12 @@ export const Container = styled.div`
     color: #ad734b;
   }
   @media (min-width: 43rem) {
-    width: 245px;
-    height: 370px;
     p {
-      font-size: 1rem;
-      width: 200px;
-      height: 170px;
+      font-size: 1.5rem;
       padding: 20px;
     }
     h5 {
-      font-size: 1.25rem;
+      font-size: 2rem;
     }
   }
 `;
