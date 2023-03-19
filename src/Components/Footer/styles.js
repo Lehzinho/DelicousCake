@@ -27,11 +27,12 @@ export const Container = styled.footer`
     line-height: 13px;
     font-size: 0.625rem;
     margin-top: 5px;
-    margin-left: 30px;
   }
   @media (min-width: 45rem) {
     h1 {
       margin-top: 15px;
+      margin-left: 30px;
+
       font-size: 1.25rem;
     }
   }
