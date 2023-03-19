@@ -41,7 +41,7 @@ export function Home({ media }) {
             <h1>Bolos Decorados</h1>
             <p>
               Trabalhamos com decoração de bolos em chantilly, buttercream
-              conforme a sua escolha, para fazer seu momento inesquecível.
+              conforme a sua escolha, para fazer seu o momento inesquecível.
             </p>
             <Button link="/orçamento" title="Faça um orçamento" />
           </div>
@@ -53,7 +53,7 @@ export function Home({ media }) {
         </Orcamento>
         <Produtos>
           <h1>Nossos Produtos</h1>
-          <p>"A felikcidade mora em um padaçco de bolo!"</p>
+          <p>"A felicidade mora em um pedaço de bolo!"</p>
           <Slides>
             <Carousel slides={slides} autoPlay={false} interval={3000} />
           </Slides>

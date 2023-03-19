@@ -20,7 +20,7 @@ export function Orçamento({ media }) {
             <CakeInfo>
               <img src={cakeInfo} alt="" />
               <p>
-                Bem-vindo(a) a página de orçamentos da Delicious Cakes, eu sou
+                Bem-vindo(a) a página de orçamentos da Delicious Cake, eu sou
                 Leidiane Borges e terei o prazer de fazer parte de um momento
                 especial para você e sua família.
                 <br />
