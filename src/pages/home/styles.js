@@ -92,7 +92,7 @@ export const FotoDisplay = styled.div`
 
 export const Orcamento = styled.section`
   width: 210px;
-  margin: 10px auto;
+  margin: 10px auto 50px;
   display: flex;
   flex-direction: column;
   align-items: center;

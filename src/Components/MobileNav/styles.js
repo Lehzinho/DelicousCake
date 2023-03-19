@@ -65,6 +65,7 @@ export const Menu = styled.ul`
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.COLORS.BUTTON_COLOR};
   background: #f7e9e9;
+  z-index: 10;
   a {
     font-family: "Inter";
     font-style: normal;

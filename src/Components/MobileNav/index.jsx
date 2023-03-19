@@ -11,7 +11,9 @@ export function MobileNav() {
   }
   return (
     <Container>
-      <img src={Logo} alt="" />
+      <NavLink to="/">
+        <img src={Logo} alt="" />
+      </NavLink>
       <div>
         <button
           className={active ? "active" : ""}
