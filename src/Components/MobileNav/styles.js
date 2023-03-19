@@ -72,6 +72,7 @@ export const Menu = styled.ul`
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 15px;
+    color: ${({ theme }) => theme.COLORS.BUTTON_COLOR};
   }
   a:visited {
     color: black;
