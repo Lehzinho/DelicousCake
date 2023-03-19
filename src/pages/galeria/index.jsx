@@ -24,17 +24,17 @@ const comments = [
   {
     nome: "Dayanna",
     comentario:
-      "Não tenho palavras para agradecer pelo carinho que você transmite atravez desse trabalho lindo. Mexe com a emoção daquele momento. Você nao tem ideia de quantas pessoas amaram o seu trabalho e eu nem preciso dizer foi um evento no igreja e foi incrivel, você fez parte daquele momento. Obrigada mais uma vez por tornar cada momento ainda mais especial.",
+      "Não tenho palavras para agradecer pelo carinho que você transmite através desse trabalho lindo. Mexe com a emoção daquele momento. Você nao tem ideia de quantas pessoas amaram o seu trabalho e eu nem preciso dizer foi um evento no igreja e foi incrivel, você fez parte daquele momento. Obrigada mais uma vez por tornar cada momento ainda mais especial.",
   },
   {
     nome: "Carolina Kloc",
     comentario:
-      "Não tenho palavras para agradecer pelo carinho que você transmite atravez desse trabalho lindo. Mexe com a emoção daquele momento. Você nao tem ideia de quantas pessoas amaram o seu trabalho e eu nem preciso dizer foi um evento no igreja e foi incrivel, você fez parte daquele momento. Obrigada mais uma vez por tornar cada momento ainda mais especial.",
+      "Tô pra te mandar as fotos  desde ontem, Senhor que bolo maravilhoso e super comentado da festa, tanto quanto o capricho quanto ao sabor e leveza da foto, quando eu e a Mari pegamos o bolo a gente ficou admirada com o capricho. Eu só falava pra ela, Mari segura bem esse bolo!",
   },
   {
-    nome: "Dayanna",
+    nome: "Viviane",
     comentario:
-      "Não tenho palavras para agradecer pelo carinho que você transmite atravez desse trabalho lindo. Mexe com a emoção daquele momento. Você nao tem ideia de quantas pessoas amaram o seu trabalho e eu nem preciso dizer foi um evento no igreja e foi incrivel, você fez parte daquele momento. Obrigada mais uma vez por tornar cada momento ainda mais especial.",
+      "Excelente trabalho e capricho. O bolo de quatro leites com geleia de frutas vermelhas é o meu preferido. Super recomendo!",
   },
 ];
 
