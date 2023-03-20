@@ -262,7 +262,7 @@ export function CakeForm({ hasBudget = false, contato }) {
         <Button
           handleClick={routeChange}
           className={contato ? "active" : ""}
-          title="SEND"
+          title="Enviar"
         />
       </Form>
     </Container>
